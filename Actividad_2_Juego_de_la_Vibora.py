@@ -20,8 +20,8 @@ import random
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
-color = ['magenta', 'purple', 'darkblue', 'grey', 'orange']
-color2 = ['yellow', 'skyblue', 'lightgreen', 'gold', 'pink']
+color = ['orange','magenta', 'purple', 'darkblue', 'grey']
+color2 = ['pink', 'yellow', 'skyblue', 'lightgreen', 'gold']
 colal = random.choice(color)
 colal2 = random.choice(color2)
 
