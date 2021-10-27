@@ -46,10 +46,15 @@ def move():
 
     snake.append(head)
 
+    # Ahora la comida se actualiza independientemente de si es alcanzada
+    # o no por la serpiente
+    
+    food.x = randrange(-19, 18) * 10  # Las coordenadas x, y, de la comida, adquieren
+    food.y = randrange(-19, 18) * 10  # valores aleatorios menores a los límites de la ventana
+    
     if head == food:
         print('Snake:', len(snake))
-        food.x = randrange(-15, 15) * 10
-        food.y = randrange(-15, 15) * 10
+        
     else:
         snake.pop(0)
 
@@ -60,7 +65,7 @@ def move():
 
     square(food.x, food.y, 9, colal2)
     update()
-    ontimer(move, 100)
+    ontimer(move, 100) # La actualización se realiza cada segundo (paso de 1 segundo)
 
 setup(420, 420, 370, 0)
 hideturtle()
