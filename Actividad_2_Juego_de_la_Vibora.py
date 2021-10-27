@@ -15,10 +15,15 @@
 from turtle import *
 from random import randrange
 from freegames import square, vector
+import random
 
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
+color = ['magenta', 'purple', 'darkblue', 'grey', 'orange']
+color2 = ['yellow', 'skyblue', 'lightgreen', 'gold', 'pink']
+colal = random.choice(color)
+colal2 = random.choice(color2)
 
 def change(x, y):
     "Change snake direction."
@@ -51,9 +56,9 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, 'black')
+        square(body.x, body.y, 9, colal)
 
-    square(food.x, food.y, 9, 'green')
+    square(food.x, food.y, 9, colal2)
     update()
     ontimer(move, 100)
 
